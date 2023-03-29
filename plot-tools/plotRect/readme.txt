@@ -1,0 +1,1 @@
+run comp_demo_whisper_TIP.py
