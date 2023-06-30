@@ -3,7 +3,7 @@ Learning a Deep Ensemble Network with Band Importance for Hyperspectral Object T
 
 1. The results of all compared tracker are available in the folder "detection-res".
 2. The tools for evaluating the compared trackers can be found in the folder "plot-tools".
-3. The source code can be found in the folder "code".
+3. The source code can be found in SEE-Net-VIS16.zip and SEE-Net-NIR25.zip, where the former represents the code run on 16-bands data and the latter represents the coder run on 25-bands data.
 
 # Quick Start
 ## 1. Requirements
