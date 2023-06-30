@@ -1,2 +1,0 @@
-These results are based on datasets from the HOTC-whispers2020 competition, seen in https://www.hsitracking.com/, where the hyperspectral images contain16 bands.
-In the folder of "HOT-tracker-results", SEE-Net is the result of the algorithm proposed in this paper (Learning a Deep Ensemble Network with Band Importance for Hyperspectral Object Tracking) .
