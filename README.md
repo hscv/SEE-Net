@@ -13,10 +13,10 @@ Please install the environment following https://github.com/hqucv/siamban.
 Download training and testing datasets in https://www.hsitracking.com/.
 
 ## 3. Train
-```python
 (a) Download pretrained model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
 (b) Change the path of training data in siamese/dataset/dataset.py
 (c) Run:
+```python
 cd experiments/siamban_r50_l234
 CUDA_VISIBLE_DEVICES=0,1,2
 python -m torch.distributed.launch \
@@ -26,8 +26,8 @@ python -m torch.distributed.launch \
 ```
 
 ## 4. Test
-```python
 Download testing model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
+```python
 python tools/demo.py --config experiments/siamban_r50_l234/config.yaml --snapshot experiments/siamban_r50_l234/snapshot/checkpoint_e30.pth --video_path test_path
 ```
 
