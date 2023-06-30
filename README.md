@@ -10,9 +10,8 @@ Learning a Deep Ensemble Network with Band Importance for Hyperspectral Object T
 Please install the environment following https://github.com/hqucv/siamban.
 
 ## 2. Dataset
-```python
 Download training and testing datasets in https://www.hsitracking.com/.
-```
+
 ## 3. Train
 ```python
 (a) Download pretrained model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
