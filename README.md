@@ -17,7 +17,7 @@ Download training and testing datasets in https://www.hsitracking.com/.
 ```python
 (a) Download pretrained model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
 (b) Change the path of training data in siamese/dataset/dataset.py
-(3) Run:
+(c) Run:
 cd experiments/siamban_r50_l234
 CUDA_VISIBLE_DEVICES=0,1,2
 python -m torch.distributed.launch \
