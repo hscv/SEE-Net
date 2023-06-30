@@ -14,7 +14,9 @@ Download training and testing datasets in https://www.hsitracking.com/.
 
 ## 3. Train
 (a) Download pretrained model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
+
 (b) Change the path of training data in siamese/dataset/dataset.py
+
 (c) Run:
 ```python
 cd experiments/siamban_r50_l234
