@@ -6,6 +6,9 @@ Learning a Deep Ensemble Network with Band Importance for Hyperspectral Object T
 3. The source code can be found in SEE-Net-VIS16.zip and SEE-Net-NIR25.zip, where the former represents the code run on 16-bands data and the latter represents the coder run on 25-bands data.
 
 # Quick Start
+## 0. Add SEE-Net to your PYTHONPATH
+export PYTHONPATH=$PWD:$PYTHONPATH
+
 ## 1. Requirements
 Please install the environment following https://github.com/hqucv/siamban.
 
