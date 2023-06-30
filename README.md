@@ -1,48 +1,84 @@
 # SEE-Net
 Learning a Deep Ensemble Network with Band Importance for Hyperspectral Object Tracking
 
-1. The results of all compared tracker are available in the folder "detection-res".
-2. The tools for evaluating the compared trackers can be found in the folder "plot-tools".
-3. The source code can be found in SEE-Net-VIS16.zip and SEE-Net-NIR25.zip, where the former represents the code run on 16-bands data and the latter represents the coder run on 25-bands data.
+1. The tools for evaluating the compared trackers can be found in the folder "plot-tools".
+2. The source code can be found in the "code" folder for processing 16-bands data and 25-bands hyperspectral images.
 
-# Quick Start
-## 0. Add SEE-Net to your PYTHONPATH
-export PYTHONPATH=$PWD:$PYTHONPATH
-
-## 1. Requirements
-Please install the environment following https://github.com/hqucv/siamban.
-
-## 2. Dataset
+## 1. Dataset
 Download training and testing datasets in https://www.hsitracking.com/.
-
-## 3. Train
-(a) Download pretrained model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
-
-(b) Change the path of training data in siamese/dataset/dataset.py
-
-(c) Run:
 ```python
-cd experiments/siamban_r50_l234
-CUDA_VISIBLE_DEVICES=0,1,2
-python -m torch.distributed.launch \
-    --nproc_per_node=3 \
-    --master_port=2333 \
-    ../../tools/train.py --cfg config.yaml
+1. The format of training dataset:
+    rootDir |-
+               videoName1
+                   |- HSI
+                       |- 0001.png
+                       |- 0002.png
+                       ...
+                       |- XXXX.png
+                       |- groundturth_rect.txt
+               videoName2
+                   |- HSI
+                       |- 0001.png
+                       |- 0002.png
+                       ...
+                       |- XXXX.png
+                       |- groundturth_rect.txt
+               ...
+               videoNameN
+                   |- HSI
+                       |- 0001.png
+                       |- 0002.png
+                       ...
+                       |- XXXX.png
+                       |- groundturth_rect.txt
+```
+```python
+2. The format of testing dataset:
+    rootDir |-
+               test_HSI
+                   |- videoName1
+                       |- groundturth_rect.txt
+                       |- HSI
+                            |- 0001.png
+                            |- 0002.png
+                            |- ...
+                            |- XXXX.png
+                   |- videoName2
+                       |- groundturth_rect.txt
+                       |- HSI
+                            |- 0001.png
+                            |- 0002.png
+                            |- ...
+                            |- XXXX.png
+                   ...
+                   |- videoNameM
+                       |- groundturth_rect.txt
+                       |- HSI
+                            |- 0001.png
+                            |- 0002.png
+                            |- ...
+                            |- XXXX.png
 ```
 
-## 4. Test
-Download testing model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ  
-
-Access code: 1234 
-```python
-python tools/demo.py --config experiments/siamban_r50_l234/config.yaml --snapshot experiments/siamban_r50_l234/snapshot/checkpoint_e30.pth --video_path test_path
-```
-
-## 5. Results
+## 2. Results
 More results can be found in:
 ```python
 https://pan.baidu.com/s/1BcePsITWMrP59nUcU_eJcg 
 Access code: 1234
+```
+
+## Citation
+If these codes are helpful for you, please cite this paper:
+```python
+@ARTICLE{10128966,
+  author={Li, Zhuanfeng and Xiong, Fengchao and Zhou, Jun and Lu, Jianfeng and Qian, Yuntao},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Learning a Deep Ensemble Network With Band Importance for Hyperspectral Object Tracking}, 
+  year={2023},
+  volume={32},
+  number={},
+  pages={2901-2914},
+  doi={10.1109/TIP.2023.3263109}}
 ```
 
 ## Contact
