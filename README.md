@@ -39,11 +39,11 @@ python tools/demo.py --config experiments/siamban_r50_l234/config.yaml --snapsho
 ```
 
 ## 5. Results
-HSI-VIS (16 bands) and HSI-NIR (25 bands) can be downloaded in : 
-
-https://pan.baidu.com/s/1-B-ng2jQEnLRyFx_IvMniQ ---- Access code : 1234 
-
-More results can be found in the folder "detection-res".
+More results can be found in:
+```python
+https://pan.baidu.com/s/1BcePsITWMrP59nUcU_eJcg 
+Access code: 1234
+```
 
 ## Contact
 lizhuanfeng@njust.edu.cn
