@@ -35,4 +35,8 @@ Access code: 1234
 python tools/demo.py --config experiments/siamban_r50_l234/config.yaml --snapshot experiments/siamban_r50_l234/snapshot/checkpoint_e30.pth --video_path test_path
 ```
 
+## 5. Results
+HSI-VIS (16 bands) and HSI-NIR (25 bands) can be downloaded in : https://pan.baidu.com/s/1-B-ng2jQEnLRyFx_IvMniQ ---- Access code : 1234 
+More results can be found in the folder "detection-res".
+
 Contact: lizhuanfeng@njust.edu.cn
