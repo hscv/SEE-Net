@@ -28,7 +28,9 @@ python -m torch.distributed.launch \
 ```
 
 ## 4. Test
-Download testing model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ   Access code: 1234 
+Download testing model in https://pan.baidu.com/s/1xUNW1wnyN7_Fo7Gcl1GaKQ  
+
+Access code: 1234 
 ```python
 python tools/demo.py --config experiments/siamban_r50_l234/config.yaml --snapshot experiments/siamban_r50_l234/snapshot/checkpoint_e30.pth --video_path test_path
 ```
