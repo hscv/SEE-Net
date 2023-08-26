@@ -170,7 +170,10 @@ def track_once(gtArr, video_path_name):
     cfg.CUDA = torch.cuda.is_available() and cfg.CUDA
     device = torch.device('cuda' if cfg.CUDA else 'cpu')
     model = ModelBuilder() # create model
-    model = load_pretrain(model, args.snapshot).cuda().eval() # load model
+    device = torch.cuda.current_device()
+    pretrained_dict = torch.load(args.snapshot, map_location=lambda storage, loc: storage.cuda(device))
+    model.load_state_dict(pretrained_dict, strict=True)
+    model = model.cuda().eval()
     tracker = build_tracker(model) # build tracker
 
     video_name = video_path_name.split('/')[-1].split('.')[0]
